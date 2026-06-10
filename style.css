@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, #ffe3ec, transparent 35%),
+    radial-gradient(circle at bottom right, #ffd1dc, transparent 35%),
+    linear-gradient(135deg, #ff758c, #ff7eb3, #ffb199);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  padding: 25px;
+  color: #333;
+}
+
+.background-glow {
+  position: fixed;
+  width: 350px;
+  height: 350px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  filter: blur(40px);
+  animation: glowMove 8s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+.card {
+  width: 100%;
+  max-width: 560px;
+  padding: 38px 30px;
+  border-radius: 30px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.25),
+    inset 0 0 20px rgba(255, 255, 255, 0.45);
+
+  animation: cardEntrance 1.2s ease;
+}
+
+.top-label {
+  color: #ff4f81;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+h1 {
+  color: #ff2f6d;
+  font-size: 38px;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.intro {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+.love-letter {
+  background: #fff7fa;
+  padding: 22px;
+  border-radius: 22px;
+  margin-bottom: 25px;
+  text-align: left;
+  border: 1px solid rgba(255, 111, 159, 0.35);
+}
+
+.love-letter p {
+  color: #444;
+  font-size: 16.5px;
+  line-height: 1.75;
+  margin-bottom: 15px;
+}
+
+.love-letter p:last-child {
+  margin-bottom: 0;
+}
+
+.invite-box {
+  background: linear-gradient(135deg, #fff0f5, #ffe6ef);
+  border: 2px dashed #ff6f9f;
+  padding: 22px;
+  border-radius: 22px;
+  margin-bottom: 25px;
+}
+
+.invite-box h2 {
+  color: #ff2f6d;
+  margin-bottom: 14px;
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+.invite-box p {
+  color: #555;
+  line-height: 1.8;
+  font-size: 16.5px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+button {
+  border: none;
+  padding: 14px 24px;
+  border-radius: 40px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-weight: 700;
+}
+
+#yesBtn {
+  background: linear-gradient(135deg, #ff2f6d, #ff6f9f);
+  color: white;
+  box-shadow: 0 10px 25px rgba(255, 47, 109, 0.35);
+}
+
+#yesBtn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 14px 30px rgba(255, 47, 109, 0.45);
+}
+
+#yesBtn:disabled {
+  opacity: 0.9;
+  cursor: default;
+}
+
+#noBtn {
+  background: #f1f1f1;
+  color: #555;
+  position: relative;
+}
+
+#noBtn:hover {
+  background: #e8e8e8;
+}
+
+#response {
+  margin-top: 25px;
+  font-size: 20px;
+  color: #ff2f6d;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.footer-message {
+  margin-top: 22px;
+  color: #777;
+  font-size: 15px;
+  font-style: italic;
+}
+
+.heart {
+  position: fixed;
+  color: white;
+  font-size: 24px;
+  animation: floatUp 5s linear infinite;
+  opacity: 0.85;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.sparkle {
+  position: fixed;
+  font-size: 18px;
+  animation: sparkleFloat 3.5s linear infinite;
+  pointer-events: none;
+  z-index: 3;
+}
+
+@keyframes cardEntrance {
+  from {
+    transform: translateY(40px) scale(0.92);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(105vh) scale(0.8) rotate(0deg);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-15vh) scale(1.5) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes sparkleFloat {
+  from {
+    transform: translateY(20px) scale(0.8);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-90px) scale(1.4);
+    opacity: 0;
+  }
+}
+
+@keyframes glowMove {
+  from {
+    transform: translate(-120px, -80px);
+  }
+
+  to {
+    transform: translate(120px, 120px);
+  }
+}
+
+@media (max-width: 520px) {
+  body {
+    padding: 18px;
+    align-items: flex-start;
+  }
+
+  .card {
+    padding: 32px 22px;
+    margin-top: 18px;
+  }
+
+  h1 {
+    font-size: 31px;
+  }
+
+  .intro {
+    font-size: 16.5px;
+  }
+
+  .love-letter p {
+    font-size: 15.8px;
+  }
+
+  .invite-box h2 {
+    font-size: 21px;
+  }
+
+  button {
+    width: 100%;
+  }
+}

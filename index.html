@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Happy 29th Monthsary, My Love</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background-glow"></div>
+  <div class="hearts"></div>
+
+  <main class="card">
+    <p class="top-label">A special invitation for my favorite person</p>
+
+    <h1>Happy 29th Monthsary, My Love ❤️</h1>
+
+    <p class="intro">
+      29 months of love, laughter, memories, and choosing each other.
+    </p>
+
+    <section class="love-letter">
+      <p>
+        My love, for 29 months, you have been one of the most beautiful parts
+        of my life. Every laugh, every conversation, every simple moment with
+        you has become a memory I will always treasure.
+      </p>
+
+      <p>
+        Thank you for staying with me, for loving me, for understanding me,
+        and for making my days brighter in ways you may not even realize.
+        You are my comfort, my happiness, my peace, and my favorite person.
+      </p>
+
+      <p>
+        This June 13, I want to celebrate not only our monthsary, but also the
+        love we continue to build together.
+      </p>
+    </section>
+
+    <div class="invite-box">
+  <h2>Will you celebrate our 29th monthsary with me?</h2>
+
+  <p>
+    I would love to spend this special moment with you and make another beautiful memory together. 💕
+  </p>
+
+  <p>
+    📅 Date: <strong>June 13</strong><br />
+    🕒 Time: <strong>Thursday, after working hours</strong><br />
+    📍 Place: <strong>Lavin Restauran</strong>
+  </p>
+</div>
+
+    <div class="buttons">
+      <button id="yesBtn">Yes, my love 💖</button>
+      <button id="noBtn">No 😢</button>
+    </div>
+
+    <p id="response"></p>
+
+    <p class="footer-message">
+      I love you so much, always and forever 💕
+    </p>
+  </main>
+
+  <!-- Hidden form for email notification -->
+  <form
+    id="notifyForm"
+    action="https://formspree.io/f/maqzbvqw"
+    method="POST"
+    style="display: none;"
+  >
+    <input type="hidden" name="answer" value="YES" />
+    <input type="hidden" name="message" value="She clicked YES to the 29th monthsary invitation!" />
+    <input type="hidden" name="occasion" value="29th Monthsary" />
+    <input type="hidden" name="date" value="June 13" />
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
